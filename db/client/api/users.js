@@ -3,7 +3,7 @@ const axios = require('axios');
 const Users = require('../../users/userSchema');
 const fetchURL = process.env.MODE === 'DEV'
   ? 'http://localhost:5000'
-  : 'hackday-mymovies-backend.herokuapp.com'
+  : 'https://hackday-mymovies-backend.herokuapp.com'
 
 const router = express.Router();
 
