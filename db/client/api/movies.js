@@ -30,7 +30,7 @@ router.get('/api/movies/:query', async (req, res) => {
 
 router.get('/api/movie/:id', async (req, res) => {
   const id = req.params.id
-  const response = await axios.get(`https://www.omdbapi.com/?i=${id}&apikey=${process.env.MOVIE_API}`);
+  const response = await axios.get(`https://www.omdbapi.com/?i=${id}&apikey=d9835cc5`);
   const movie = await Movies.findOne({imdbID: id})
   if(movie === null){
     return res.json(response.data)
