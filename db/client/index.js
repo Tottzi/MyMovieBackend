@@ -38,7 +38,7 @@ const addOrUpdateUser = async (body, params) => {
   const userMovies = await Users.findOne({name: userName}).then(doc => doc.movies)
   const movieIndex = userMovies.findIndex(movie => movie.imdbID === body.imdbID)
   if(movieIndex === -1){
-    const rating = body.ratings[0].rating || 0
+    const rating = body.ratings ? body.ratings[0].rating : 0
     const newMovie = {
       imdbID: body.imdbID,
       ratings: rating
@@ -48,7 +48,7 @@ const addOrUpdateUser = async (body, params) => {
     }, { new: true }, (err, data) => console.log(data.nModified)
     )
   } else {
-    const rating = body.ratings[0].rating || 0
+    const rating = body.ratings ? body.ratings[0].rating : 0
     Users.updateOne({name : userName, "movies.imdbID": body.imdbID},{
       $set: {"movies.$.ratings": rating}
     }, (err, data) => console.log(data.nModified))

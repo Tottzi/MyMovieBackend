@@ -1,6 +1,9 @@
 const express = require('express');
 const axios = require('axios');
-const Users = require('../../users/userSchema')
+const Users = require('../../users/userSchema');
+const fetchURL = process.env.MODE === 'DEV'
+  ? 'http://localhost:5000'
+  : 'hackday-mymovies-backend.herokuapp.com'
 
 const router = express.Router();
 
@@ -16,7 +19,7 @@ router.get('/mymovies/:name', async (req, res) => {
   const userName = req.params.name.toLowerCase();
   const user = await Users.findOne({name: userName})
   const movies = await Promise.all(user.movies.map(async movie => {
-    const response = await axios.get(`http://localhost:5000/api/movie/${movie.imdbID}`)
+    const response = await axios.get(`${fetchURL}/api/movie/${movie.imdbID}`)
     return response.data
   }))
   res.json(movies)
