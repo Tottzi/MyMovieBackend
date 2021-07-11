@@ -1,0 +1,46 @@
+{
+ "userId": "7c362e0662",
+ "name": "Adam",
+ "movies": [
+  {
+   "imdbID": "tt0371746",
+   "ratings": "6"
+  },
+  {
+   "imdbID": "tt0103241",
+   "ratings": "8"
+  },
+  {
+   "imdbID": "tt0103776",
+   "ratings": "7"
+  },
+  {
+   "imdbID": "tt2313197",
+   "ratings": 0
+  },
+  {
+   "imdbID": "tt0094712",
+   "ratings": 0
+  },
+  {
+   "imdbID": "tt0348150",
+   "ratings": "7"
+  },
+  {
+   "imdbID": "tt0848228",
+   "ratings": "5"
+  },
+  {
+   "imdbID": "tt4154796",
+   "ratings": 0
+  },
+  {
+   "imdbID": "tt0903747",
+   "ratings": "4"
+  },
+  {
+   "imdbID": "tt1502397",
+   "ratings": "5"
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "imdbID": "tt2975590",
+ "ratings": [
+  {
+   "author": "asdfgghj",
+   "authorName": "Adam",
+   "rating": "7"
+  }
+ ],
+ "comments": [
+  {
+   "author": "1508ee677c",
+   "authorName": "Adam",
+   "text": "comment",
+   "timeStamp": "2021-07-01T14:18:28.102Z",
+   "id": "a22d84c814"
+  },
+  {
+   "author": "3d991e16fb",
+   "authorName": "Adam",
+   "text": "comment",
+   "timeStamp": "2021-07-01T14:18:50.803Z",
+   "id": "0508f6d25a"
+  },
+  {
+   "author": "3838909d77",
+   "authorName": "John",
+   "text": "I liked it",
+   "timeStamp": "2021-07-01T14:52:03.239Z",
+   "id": "1ac423769e"
+  },
+  {
+   "author": "7645f2a972",
+   "authorName": "John",
+   "text": "I liked it",
+   "timeStamp": "2021-07-01T14:52:36.356Z",
+   "id": "42372a5d6d"
+  },
+  {
+   "author": "b3e24d0f21",
+   "authorName": "John",
+   "text": "asSA",
+   "timeStamp": "2021-07-01T14:52:40.437Z",
+   "id": "6ad9b13619"
+  },
+  {
+   "author": "f5326a373f",
+   "authorName": "John",
+   "text": "comment",
+   "timeStamp": "2021-07-01T14:53:53.246Z",
+   "id": "8af0544903"
+  }
+ ]
+}

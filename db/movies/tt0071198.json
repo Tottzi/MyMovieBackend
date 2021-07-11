@@ -1,0 +1,42 @@
+{
+ "imdbID": "tt0071198",
+ "ratings": [
+  {
+   "author": "asdfgghj",
+   "authorName": "Adam",
+   "rating": "2"
+  }
+ ],
+ "comments": [
+  {
+   "author": "feb2343176",
+   "authorName": "Adam",
+   "text": "Latest comment what I'm writing now in several rows\n",
+   "timeStamp": "2021-07-02T06:42:31.904Z",
+   "id": "bde871f36b"
+  },
+  {
+   "author": "ede11ac7da",
+   "authorName": "Adam",
+   "text": "New comment edited",
+   "timeStamp": "2021-07-02T06:38:58.116Z",
+   "id": "b8b278b4dd",
+   "changed": "2021-07-02T10:03:04.008Z"
+  },
+  {
+   "author": "8131f4c193",
+   "authorName": "Adam",
+   "text": "asdasdasdsgsasadf\n",
+   "timeStamp": "2021-07-02T06:38:48.401Z",
+   "id": "0f3dc821f8"
+  },
+  {
+   "author": "55e47cb202",
+   "authorName": "Adam",
+   "text": "new comment edited",
+   "timeStamp": "2021-07-02T06:30:07.444Z",
+   "id": "4c66f14468",
+   "changed": "2021-07-02T06:30:16.418Z"
+  }
+ ]
+}

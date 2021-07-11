@@ -1,0 +1,48 @@
+{
+ "imdbID": "tt2313197",
+ "ratings": [
+  {
+   "author": "asdfgghj",
+   "authorName": "Bob",
+   "rating": "1"
+  }
+ ],
+ "comments": [
+  {
+   "author": "fd925af403",
+   "authorName": "Bob",
+   "text": "You cannot delete my comment",
+   "timeStamp": "2021-07-02T10:45:38.942Z",
+   "id": "8c6180eada"
+  },
+  {
+   "author": "830d4828e6",
+   "authorName": "Bob",
+   "text": "It is my comment not yours",
+   "timeStamp": "2021-07-02T10:45:25.918Z",
+   "id": "049e927068"
+  },
+  {
+   "author": "0df6669e31",
+   "authorName": "Adam",
+   "text": "New comment edited",
+   "timeStamp": "2021-07-02T07:17:41.597Z",
+   "id": "2c457085b8",
+   "changed": "2021-07-02T07:17:52.442Z"
+  },
+  {
+   "author": "4ffd041d9c",
+   "authorName": "Adam",
+   "text": "New comment",
+   "timeStamp": "2021-07-01T18:27:50.692Z",
+   "id": "db9209c530"
+  },
+  {
+   "author": "37c4724945",
+   "authorName": "Adam",
+   "text": "Comment",
+   "timeStamp": "2021-07-01T18:27:44.407Z",
+   "id": "76f7683aa5"
+  }
+ ]
+}

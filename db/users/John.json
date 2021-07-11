@@ -1,0 +1,18 @@
+{
+ "userId": "65ff34afff",
+ "name": "John",
+ "movies": [
+  {
+   "imdbID": "tt2911666",
+   "ratings": "6"
+  },
+  {
+   "imdbID": "tt2975590",
+   "ratings": 0
+  },
+  {
+   "imdbID": "tt2313197",
+   "ratings": 0
+  }
+ ]
+}

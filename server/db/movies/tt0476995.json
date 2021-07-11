@@ -1,0 +1,24 @@
+{
+ "imdbID": "tt0476995",
+ "ratings": [
+  {
+   "author": "asdfgghj",
+   "authorName": "Adam",
+   "rating": "9"
+  },
+  {
+   "author": "asdfgxxx",
+   "authorName": "Adam",
+   "rating": "7"
+  }
+ ],
+ "comments": [
+  {
+   "author": "asdfgghj",
+   "authorName": "Adam",
+   "text": "First Comment",
+   "timeStamp": "Tue Jun 29 2021 21:36:37 GMT+0200 (Central European Summer Time)",
+   "ID": "a24feb9c3b"
+  }
+ ]
+}
