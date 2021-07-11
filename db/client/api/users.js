@@ -14,7 +14,7 @@ router.delete('/mymovies', async (req, res) => {
 
 router.get('/mymovies/:name', async (req, res) => {
   const userName = req.params.name.toLowerCase();
-  const user = await Users.findOne({name: userName})
+  const user = await Users.findOne({name: userName}).catch(err => console.log(err.message))
   const movies = await Promise.all(user.movies.map(async movie => {
     const id = movie.imdbID
     const response = await axios.get(`https://www.omdbapi.com/?i=${id}&apikey=${process.env.MOVIE_API}`);
