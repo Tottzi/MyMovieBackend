@@ -19,15 +19,6 @@ router.get('/mymovies/:name', async (req, res) => {
   const userName = req.params.name.toLowerCase();
   const user = await Users.findOne({name: userName}).catch(err => console.log(err))
   const movies = await Promise.all(user.movies.map(async movie => {
-    // const id = movie.imdbID
-    // const response = await axios.get(`https://www.omdbapi.com/?i=${id}&apikey=${process.env.MOVIE_API}`);
-    // const mongoMovie = await Movies.findOne({imdbID: id})
-    // if(mongoMovie === null){
-    //   return response.data
-    // }
-    // const responseObj = response.data;
-    // responseObj.localData = mongoMovie;
-    // return responseObj;
     const response = await axios.get(`${fetchURL}api/movie/${movie.imdbID}`)
     return response.data
   }))
