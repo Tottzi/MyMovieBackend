@@ -1,5 +1,6 @@
 const express = require('express');
 const axios = require('axios');
+const bcrypt = require('bcrypt');
 const Users = require('../../users/userSchema');
 const fetchURL = process.env.MODE === 'DEV'
   ? 'http://localhost:5000/'
@@ -46,6 +47,26 @@ router.get('/:id', async (req, res) => {
 
 })
 
+router.post('/verify/username', async (req, res) => {
+  const userName = req.body.username.toLowerCase();
+  const user = await Users.findOne({ name: userName})
+  res.json(user)
+});
+
+router.post('/newuser', async (req, res) => {
+  const userId = Math.random().toString(16).substr(2,10)
+  const psw = await bcrypt.hash(req.body.psw, 10)
+  const newUser = {
+    userId: userId,
+    name: req.body.username.toLowerCase(),
+    password: psw,
+    movies: []
+  }
+  const newUserMongo = new Users(newUser)
+  newUserMongo.save()
+  .then(data => res.json(newUser.name))
+  .catch(err => console.log('Error', err.message))
+})
 
 
 router.post('/', (req, res) => {
