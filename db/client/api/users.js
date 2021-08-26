@@ -69,8 +69,15 @@ router.post('/newuser', async (req, res) => {
 })
 
 
-router.post('/', (req, res) => {
-  res.send(req.body)
+router.post('/login', async (req, res) => {
+  const userName = req.body.userName.toLowerCase();
+  const user = await Users.findOne({ name: userName})
+  if(user === null){
+    return res.json({"message": "The username is not exist"})
+  }
+  const passCheck = await bcrypt.compare(req.body.userPass, user.password)
+  const { movies, userId, name } = user;
+  passCheck ? res.json({movies, userId, name}) : res.json({"message": "The password is not correct"})
 })
 
 module.exports = router
