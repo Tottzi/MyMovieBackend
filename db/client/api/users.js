@@ -16,7 +16,8 @@ router.delete('/mymovies', async (req, res) => {
     movie.movies.splice(movieIndex,1)
     await movie.save()
   } catch (error) {
-    res.json(error).statusCode(404);
+    console.log(error.message)
+    res.json(error);
   }
 
 })
@@ -31,7 +32,8 @@ router.get('/mymovies/:name', async (req, res) => {
     }))
     res.json(movies)
   } catch (error) {
-    res.json(error).statusCode(404);
+    console.log(error.message)
+    res.json(error);
   }
 })
 
@@ -53,7 +55,8 @@ router.get('/:id', async (req, res) => {
       res.json(user)
     }
   } catch (error) {
-    res.json(error).statusCode(404);
+    console.log(error.message)
+    res.json(error);
   }
 })
 
@@ -63,7 +66,8 @@ router.post('/verify/username', async (req, res) => {
     const user = await Users.findOne({ name: userName})
     res.json(user)
   } catch (error) {
-    res.json(error).statusCode(404);
+    console.log(error.message)
+    res.json(error);
   }
 
 });
@@ -83,7 +87,8 @@ router.post('/newuser', async (req, res) => {
     .then(data => res.json(newUser.name))
     .catch(err => console.log('Error', err.message))
   } catch (error) {
-    res.json(error).statusCode(404);
+    console.log(error.message)
+    res.json(error);
   }
 
 })
@@ -98,9 +103,10 @@ router.post('/login', async (req, res) => {
     }
     const passCheck = await bcrypt.compare(req.body.userPass, user.password)
     const { movies, userId, name } = user;
-    passCheck ? res.json({movies, userId, name}) : res.json({"message": "The password is not correct"})
+    passCheck ? res.json({movies, userId, username: name}) : res.json({"message": "The password is not correct"})
   } catch (error) {
-    res.json(error).statusCode(404);
+    console.log(error.message)
+    res.json(error);
   }
 
 })
